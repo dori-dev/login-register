@@ -1,4 +1,5 @@
-:root {}
+:root {
+}
 
 @font-face {
   font-family: Vazir;
@@ -7,7 +8,6 @@
 }
 
 * {
-  font-size: 100%;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -20,13 +20,152 @@ ul {
   list-style: none;
 }
 
+::placeholder {
+  color: #888;
+}
+
 body {
   font-family: Vazir, Arial, Helvetica, sans-serif;
   direction: rtl;
 }
 
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
 #register {
-  background: url('../images/background.svg');
+  background: url("../images/background.svg");
   background-size: cover;
+  width: 100%;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 100px 0;
+}
+
+.register-page .register {
+  width: 64%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-page .register h1 {
+  font-size: 40px;
+  color: #333;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.register-page .register ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.register-page .register ul li {
+  margin: 0 20px;
+}
+
+.register-page ul li a {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.register-page .register ul li a svg {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  fill: #444;
+  transition: 0.2s;
+}
+
+.register-page .register ul li a:hover {
+  background-color: #16a085;
+  border: 1px solid #16a085;
+}
+
+.register-page .register ul li a:hover svg {
+  fill: #fff;
+}
+
+.register-page .register form {
+  width: 50%;
+  text-align: center;
+}
+
+.register-page .register form .form-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.register-page .register form .form-item input {
+  font-size: 18px;
+  width: 95%;
+  padding: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: #333;
+}
+
+.register-page .register form .form-item input:focus {
+  border-bottom: 1px solid #16a085;
+}
+
+.register-page .register form .form-item input:focus + svg {
+  fill: #16a085;
+}
+
+.register-page .register form svg {
+  width: 20px;
+  height: 20px;
+  fill: #888;
+}
+
+.register-page .register form > input[type="submit"] {
+  margin-top: 20px;
+  padding: 5px 10px;
+  width: 80%;
+  background-color: #16a085;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.register-page .auth-login {
+  width: 35%;
+  height: 100%;
+  background-color: blue;
 }
