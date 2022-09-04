@@ -1,0 +1,32 @@
+:root {}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/vazir.woff2") format("woff2"),
+    url("../fonts/vazir.woff") format("woff");
+}
+
+* {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: Vazir, Arial, Helvetica, sans-serif;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: Vazir, Arial, Helvetica, sans-serif;
+  direction: rtl;
+}
+
+#register {
+  background: url('../images/background.svg');
+  background-size: cover;
+  height: 100vh;
+}
