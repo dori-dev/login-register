@@ -55,7 +55,6 @@ body {
   justify-content: space-between;
   background-color: #fff;
   border-radius: 25px;
-  padding: 100px 0;
 }
 
 .register-page .register {
@@ -65,6 +64,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 100px 0;
 }
 
 .register-page .register h1 {
@@ -93,7 +93,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .register-page .register ul li a svg {
@@ -101,7 +101,7 @@ body {
   height: 50px;
   padding: 10px;
   fill: #444;
-  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
 }
 
 .register-page .register ul li a:hover {
@@ -135,6 +135,15 @@ body {
   border: none;
   border-bottom: 1px solid #ccc;
   color: #333;
+  transition: all 0.2s ease-in;
+}
+
+.register-page .register form .form-item input:-webkit-autofill,
+.register-page .register form .form-item input:-webkit-autofill:hover,
+.register-page .register form .form-item input:-webkit-autofill:focus,
+.register-page .register form .form-item input:-webkit-autofill:active {
+  box-shadow: 0 0 0 30px white inset !important;
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 .register-page .register form .form-item input:focus {
@@ -149,6 +158,7 @@ body {
   width: 20px;
   height: 20px;
   fill: #888;
+  transition: all 0.2s ease-in;
 }
 
 .register-page .register form > input[type="submit"] {
@@ -167,5 +177,45 @@ body {
 .register-page .auth-login {
   width: 35%;
   height: 100%;
-  background-color: blue;
+  background: url("../images/auth-back.svg");
+  background-size: cover;
+  height: 100%;
+  padding: 100px 0;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.register-page .auth-login .login-content {
+  text-align: center;
+}
+
+.register-page .auth-login .login-content h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.register-page .auth-login .login-content p {
+  font-size: 18px;
+}
+
+.register-page .auth-login .login-content button {
+  margin-top: 20px;
+  font-size: 20px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  color: #fff;
+  padding: 3px 7px;
+  border-radius: 50px;
+  width: 70%;
+  cursor: pointer;
+}
+
+.register-page .auth-login .login-content button:hover {
+  background-color: #fff;
+  color: #16a085;
 }
