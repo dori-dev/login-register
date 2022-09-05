@@ -1,4 +1,11 @@
 :root {
+  --primary-color: #16a085;
+  --light-primary-color: #1fe0ba;
+  --secondary-color: #121212;
+  --light-secondary-color: #808080;
+  --border-color: #ccc;
+  --light-white: #fafafa;
+  --dark-white: #e6e6e6;
 }
 
 @font-face {
@@ -21,12 +28,15 @@ ul {
 }
 
 ::placeholder {
-  color: #888;
+  color: var(--light-secondary-color);
 }
 
 body {
   font-family: Vazir, Arial, Helvetica, sans-serif;
   direction: rtl;
+  background-color: var(--dark-white);
+  width: 100%;
+  height: 100vh;
 }
 
 .container {
@@ -39,8 +49,6 @@ body {
 }
 
 #register {
-  background: url("../images/background.svg");
-  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -50,26 +58,31 @@ body {
 
 .register-page {
   width: 100%;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fff;
-  border-radius: 25px;
+  background-color: var(--light-white);
+  border-radius: 20px;
 }
 
 .register-page .register {
-  width: 64%;
+  width: 65%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 50px 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 2px 2px 4px 1px rgba(250, 250, 250, 0.3),
+    -2px -2px 4px 1px rgba(250, 250, 250, 0.3);
 }
 
 .register-page .register h1 {
   font-size: 40px;
-  color: #333;
+  color: var(--secondary-color);
   font-weight: bold;
   margin: 20px 0;
 }
@@ -78,7 +91,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .register-page .register ul li {
@@ -89,10 +102,11 @@ body {
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 0.3);
   transition: all 0.2s ease-in-out;
 }
 
@@ -100,17 +114,18 @@ body {
   width: 50px;
   height: 50px;
   padding: 10px;
-  fill: #444;
+  fill: var(--secondary-color);
   transition: all 0.2s ease-in-out;
 }
 
 .register-page .register ul li a:hover {
-  background-color: #16a085;
-  border: 1px solid #16a085;
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-shadow: 0px 0px 4px 2px rgba(22, 160, 133, 0.3);
 }
 
 .register-page .register ul li a:hover svg {
-  fill: #fff;
+  fill: var(--light-white);
 }
 
 .register-page .register form {
@@ -124,7 +139,7 @@ body {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 .register-page .register form .form-item input {
@@ -133,60 +148,79 @@ body {
   padding: 5px;
   outline: none;
   border: none;
-  border-bottom: 1px solid #ccc;
-  color: #333;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--secondary-color);
   transition: all 0.2s ease-in;
+  background-color: var(--light-white);
 }
 
 .register-page .register form .form-item input:-webkit-autofill,
 .register-page .register form .form-item input:-webkit-autofill:hover,
 .register-page .register form .form-item input:-webkit-autofill:focus,
 .register-page .register form .form-item input:-webkit-autofill:active {
-  box-shadow: 0 0 0 30px white inset !important;
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  box-shadow: 0 0 0 30px var(--light-white) inset !important;
+  -webkit-box-shadow: 0 0 0 30px var(--light-white) inset !important;
 }
 
 .register-page .register form .form-item input:focus {
-  border-bottom: 1px solid #16a085;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .register-page .register form .form-item input:focus + svg {
-  fill: #16a085;
+  fill: var(--primary-color);
 }
 
 .register-page .register form svg {
   width: 20px;
   height: 20px;
-  fill: #888;
+  fill: var(--light-secondary-color);
   transition: all 0.2s ease-in;
+  margin-top: 5px;
+  margin-left: 12px;
 }
 
 .register-page .register form > input[type="submit"] {
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 5px 10px;
   width: 80%;
-  background-color: #16a085;
-  color: #fff;
+  color: var(--light-white);
   border: none;
   outline: none;
-  border-radius: 50px;
+  border-radius: 12px;
   font-size: 24px;
   cursor: pointer;
+  background: var(--primary-color);
+  background: linear-gradient(
+    20deg,
+    var(--primary-color) 0%,
+    var(--light-primary-color) 100%
+  );
+  cursor: pointer;
+  box-shadow: 2px 4px 8px 3px rgba(22, 160, 133, 0.3),
+    -2px -2px 4px 2px rgba(22, 160, 133, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+
+.register-page .register form > input[type="submit"]:hover {
+  box-shadow: 2px 4px 8px 4px rgba(22, 160, 133, 0.4),
+    -2px -2px 4px 2px rgba(22, 160, 133, 0.2);
 }
 
 .register-page .auth-login {
   width: 35%;
   height: 100%;
-  background: url("../images/auth-back.svg");
+  background: url("../images/background.svg");
   background-size: cover;
   height: 100%;
   padding: 100px 0;
-  color: #fff;
+  color: var(--light-white);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: 2px 2px 4px 1px rgba(22, 160, 133, 0.3),
+    -2px -2px 4px 1px rgba(22, 160, 133, 0.3);
 }
 
 .register-page .auth-login .login-content {
@@ -194,28 +228,47 @@ body {
 }
 
 .register-page .auth-login .login-content h2 {
-  font-size: 35px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
 .register-page .auth-login .login-content p {
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
-.register-page .auth-login .login-content button {
-  margin-top: 20px;
+.register-page .auth-login .login-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
   background-color: transparent;
-  border: 1px solid #fff;
   outline: none;
-  color: #fff;
-  padding: 3px 7px;
-  border-radius: 50px;
-  width: 70%;
+  border: none;
+  color: var(--light-white);
   cursor: pointer;
+  text-decoration: none;
+  padding: 5px 30px;
+  margin: 0 10px;
+  border-radius: 12px;
+  box-shadow: 1px 3px 6px 1px rgba(72, 72, 72, 0.3),
+    -1px -2px 4px 0 rgba(72, 72, 72, 0.2),
+    inset 1px 3px 9px 1px rgba(72, 72, 72, 0.1),
+    inset -1px -2px 6px 1px rgba(72, 72, 72, 0.1);
+  transition: all 0.2s ease-in-out;
 }
 
-.register-page .auth-login .login-content button:hover {
-  background-color: #fff;
-  color: #16a085;
+.register-page .auth-login .login-content a:hover {
+  box-shadow: 1px 4px 8px 1px rgba(72, 72, 72, 0.4),
+    -1px -2px 4px 0 rgba(72, 72, 72, 0.2),
+    inset 1px 3px 9px 1px rgba(72, 72, 72, 0.1),
+    inset -1px -2px 6px 1px rgba(72, 72, 72, 0.1);
+}
+
+.register-page .auth-login .login-content a svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--light-white);
+  margin-right: 10px;
+  transform: scaleX(-1);
 }
