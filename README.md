@@ -1,6 +1,6 @@
 # Login & Register Template
 
-Login and register template with HTML CSS JS.
+Modern login and register template with HTML & CSS.
 
 #
 
