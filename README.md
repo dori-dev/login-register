@@ -17,6 +17,6 @@ Register Page: [dori-dev.github.io/login-register/register.html](https://dori-de
 
 Login Page: [dori-dev.github.io/login-register/login.html](https://dori-dev.github.io/login-register/login.html)
 
-Download Source Code: [Click Here](https://github.com/dori-dev/login-register/archive/refs/heads/master.zip)
+Download Source Code: [Click Here](https://github.com/dori-dev/login-register/archive/refs/heads/main.zip)
 
 My Github Account: [Click Here](https://github.com/dori-dev/)
