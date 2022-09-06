@@ -1,11 +1,24 @@
 :root {
+  /* Colors */
   --accent-color: #16a085;
+  --accent-color-rgb: 22, 160, 133;
   --light-accent-color: #1fe0ba;
+  --bg-accent-color: #ecf4f2;
   --secondary-color: #121212;
   --light-secondary-color: #808080;
-  --border-color: #cccccc;
+  --border-color: #ccc;
+  --border-color-rgb: 204, 204, 204;
   --light-white: #fafafa;
   --dark-white: #e6e6e6;
+  --dark-color: #2c3e50;
+  --dark-color-rgb: 44, 62, 80;
+  --brightness-dark-color: #486684;
+  /* Fonts */
+  --header-size: 36px;
+  --button-size: 22px;
+  --text-size: 18px;
+  --icon-size: 22px;
+  --big-icon-size: 46px;
 }
 
 @font-face {
@@ -34,14 +47,13 @@ ul {
 body {
   font-family: Vazir, Arial, Helvetica, sans-serif;
   direction: rtl;
-  background-color: var(--dark-white);
-  background-color: #ecf4f2;
+  background-color: var(--bg-accent-color);
   width: 100%;
   height: 100vh;
 }
 
 .container {
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
 
@@ -50,48 +62,49 @@ body {
 }
 
 #register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .register-page {
-  width: 100%;
-  height: 90vh;
+  margin: 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
   background-color: var(--light-white);
   border-radius: 20px;
-  box-shadow: 0 0 5px 1px rgba(120, 120, 120, 0.2);
+  box-shadow: 0 2px 5px 3px rgba(var(--border-color-rgb), 0.4);
+  overflow: hidden;
 }
 
 .register-page .register {
-  width: 65%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  width: 65%;
+  height: 100%;
+  padding: 36px 18px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
 .register-page .register h1 {
-  font-size: 40px;
+  font-size: var(--header-size);
   color: var(--secondary-color);
   font-weight: bold;
-  margin: 20px 0;
+  margin-bottom: 12px;
 }
 
 .register-page .register ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .register-page .register ul li {
@@ -99,20 +112,20 @@ body {
 }
 
 .register-page ul li a {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 4px 2px rgba(204, 204, 204, 0.3);
+  height: var(--big-icon-size);
+  width: var(--big-icon-size);
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  box-shadow: 0px 0px 5px 2px rgba(var(--border-color-rgb), 0.25);
   transition: all 0.2s ease-in-out;
 }
 
 .register-page .register ul li a svg {
-  width: 50px;
-  height: 50px;
+  width: var(--big-icon-size);
+  height: var(--big-icon-size);
   padding: 10px;
   fill: var(--secondary-color);
   transition: all 0.2s ease-in-out;
@@ -121,7 +134,7 @@ body {
 .register-page .register ul li a:hover {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  box-shadow: 0px 0px 4px 2px rgba(22, 160, 133, 0.3);
+  box-shadow: 0px 0px 5px 2px rgba(var(--accent-color-rgb), 0.25);
 }
 
 .register-page .register ul li a:hover svg {
@@ -129,21 +142,22 @@ body {
 }
 
 .register-page .register form {
-  width: 50%;
+  width: 100%;
+  padding: 0 36px;
   text-align: center;
 }
 
 .register-page .register form .form-item {
-  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  margin: 25px 0;
+  width: 100%;
+  margin: 18px 0;
 }
 
 .register-page .register form .form-item input {
-  font-size: 18px;
+  font-size: var(--text-size);
   width: 95%;
   padding: 5px;
   outline: none;
@@ -171,23 +185,22 @@ body {
 }
 
 .register-page .register form svg {
-  width: 20px;
-  height: 20px;
+  width: var(--icon-size);
+  height: var(--icon-size);
   fill: var(--light-secondary-color);
   transition: all 0.2s ease-in;
-  margin-top: 5px;
   margin-left: 12px;
 }
 
 .register-page .register form > input[type="submit"] {
-  margin-top: 18px;
+  margin-top: 15px;
   padding: 5px 10px;
-  width: 80%;
+  width: 100%;
   color: var(--light-white);
   border: none;
   outline: none;
   border-radius: 12px;
-  font-size: 24px;
+  font-size: var(--button-size);
   cursor: pointer;
   background: var(--accent-color);
   background: linear-gradient(
@@ -196,29 +209,29 @@ body {
     var(--light-accent-color) 100%
   );
   cursor: pointer;
-  box-shadow: 2px 4px 8px 3px rgba(22, 160, 133, 0.3),
-    -2px -2px 4px 2px rgba(22, 160, 133, 0.2);
-  transition: all 0.1s ease-in-out;
+  box-shadow: 1px 3px 6px 1px rgba(var(--accent-color-rgb), 0.3),
+    -1px -2px 4px 0 rgba(var(--accent-color-rgb), 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .register-page .register form > input[type="submit"]:hover {
-  box-shadow: 2px 4px 8px 4px rgba(22, 160, 133, 0.4),
-    -2px -2px 4px 2px rgba(22, 160, 133, 0.2);
+  box-shadow: 1px 4px 8px 1px rgba(var(--accent-color-rgb), 0.4),
+    -1px -2px 4px 0 rgba(var(--accent-color-rgb), 0.2);
 }
 
 .register-page .auth-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 35%;
   height: 100%;
   background: url("../images/background.svg");
   background-size: cover;
-  padding: 100px 0;
+  padding: 36px 18px;
   color: var(--light-white);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  box-shadow: 3px 0 6px 0px rgba(22, 160, 133, 0.25);
+  box-shadow: 3px 0 6px 0px rgba(var(--accent-color-rgb), 0.25);
 }
 
 .register-page .auth-login .login-content {
@@ -226,12 +239,12 @@ body {
 }
 
 .register-page .auth-login .login-content h2 {
-  font-size: 40px;
+  font-size: var(--header-size);
   margin-bottom: 20px;
 }
 
 .register-page .auth-login .login-content p {
-  font-size: 18px;
+  font-size: var(--text-size);
   margin-bottom: 20px;
 }
 
@@ -239,33 +252,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
-  background-color: transparent;
+  font-size: var(--text-size);
+  background-color: var(--dark-color);
+  background: linear-gradient(
+    20deg,
+    var(--dark-color) 0%,
+    var(--brightness-dark-color) 100%
+  );
   outline: none;
   border: none;
   color: var(--light-white);
   cursor: pointer;
   text-decoration: none;
   padding: 5px 30px;
-  margin: 0 10px;
+  margin: 0 5px;
   border-radius: 12px;
-  box-shadow: 1px 3px 6px 1px rgba(72, 72, 72, 0.3),
-    -1px -2px 4px 0 rgba(72, 72, 72, 0.2),
-    inset 1px 3px 9px 1px rgba(72, 72, 72, 0.1),
-    inset -1px -2px 6px 1px rgba(72, 72, 72, 0.1);
+  box-shadow: 1px 3px 6px 1px rgba(var(--dark-color-rgb), 0.3),
+    -1px -2px 4px 0 rgba(var(--dark-color-rgb), 0.2);
   transition: all 0.2s ease-in-out;
 }
 
 .register-page .auth-login .login-content a:hover {
-  box-shadow: 1px 4px 8px 1px rgba(72, 72, 72, 0.4),
-    -1px -2px 4px 0 rgba(72, 72, 72, 0.2),
-    inset 1px 3px 9px 1px rgba(72, 72, 72, 0.1),
-    inset -1px -2px 6px 1px rgba(72, 72, 72, 0.1);
+  box-shadow: 1px 4px 8px 1px rgba(var(--dark-color-rgb), 0.4),
+    -1px -2px 4px 0 rgba(var(--dark-color-rgb), 0.2);
 }
 
 .register-page .auth-login .login-content a svg {
-  width: 20px;
-  height: 20px;
+  width: var(--text-size);
+  height: var(--text-size);
   fill: var(--light-white);
   margin-right: 10px;
   transform: scaleX(-1);
