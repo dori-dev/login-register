@@ -10,6 +10,8 @@
 
 @media screen and (max-width: 768px) {
   .container {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .main-section {
