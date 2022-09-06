@@ -1,0 +1,42 @@
+@media screen and (max-width: 992px) {
+  .main-section {
+    width: 60%;
+    padding: 0 9px;
+  }
+  .welcome {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    justify-content: center;
+  }
+  .main-section {
+    width: 100%;
+    padding: 0 18px;
+  }
+  .welcome {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    /* Fonts */
+    --header-size: 32px;
+    --button-size: 20px;
+    --text-size: 16px;
+    --icon-size: 20px;
+    --big-icon-size: 40px;
+  }
+  .main-section {
+    padding: 0;
+  }
+  .main-section ul li {
+    margin: 0 10px;
+  }
+  .main-section form {
+    padding: 0 18px;
+  }
+}
