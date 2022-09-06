@@ -6,7 +6,7 @@ Modern login and register template with HTML & CSS.
 
 # How to Use
 
-Open `login.html` with your browser!
+Open `login.html` with your browser!<br>
 Open `register.html` with your browser!
 
 #
