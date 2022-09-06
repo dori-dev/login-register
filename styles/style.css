@@ -3,7 +3,6 @@
   --accent-color: #16a085;
   --accent-color-rgb: 22, 160, 133;
   --light-accent-color: #1fe0ba;
-  --bg-accent-color: #ecf4f2;
   --secondary-color: #121212;
   --light-secondary-color: #808080;
   --border-color: #ccc;
@@ -47,35 +46,22 @@ ul {
 body {
   font-family: Vazir, Arial, Helvetica, sans-serif;
   direction: rtl;
-  background-color: var(--bg-accent-color);
+  background-color: var(--light-white);
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .container {
-  width: 100%;
-  margin: auto;
-}
-
-.row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.box {
-  margin: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 100vh;
   background-color: var(--light-white);
-  border-radius: 20px;
-  box-shadow: 0 2px 5px 3px rgba(var(--border-color-rgb), 0.4);
-  overflow: hidden;
 }
 
-.box .main-section {
+.main-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,25 +73,25 @@ body {
   border-bottom-right-radius: 20px;
 }
 
-.box .main-section h1 {
+.main-section h1 {
   font-size: var(--header-size);
   color: var(--secondary-color);
   font-weight: bold;
   margin-bottom: 15px;
 }
 
-.box .main-section ul {
+.main-section ul {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.box .main-section ul li {
+.main-section ul li {
   margin: 0 20px;
 }
 
-.box ul li a {
+ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -117,7 +103,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.box .main-section ul li a svg {
+.main-section ul li a svg {
   width: var(--big-icon-size);
   height: var(--big-icon-size);
   padding: 10px;
@@ -125,23 +111,23 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.box .main-section ul li a:hover {
+.main-section ul li a:hover {
   background-color: var(--accent-color);
   border: 1px solid var(--accent-color);
   box-shadow: 0px 0px 5px 2px rgba(var(--accent-color-rgb), 0.25);
 }
 
-.box .main-section ul li a:hover svg {
+.main-section ul li a:hover svg {
   fill: var(--light-white);
 }
 
-.box .main-section form {
+.main-section form {
   width: 100%;
   padding: 0 36px;
   text-align: center;
 }
 
-.box .main-section form .form-item {
+.main-section form .form-item {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
@@ -150,7 +136,7 @@ body {
   margin: 18px 0;
 }
 
-.box .main-section form .form-item input {
+.main-section form .form-item input {
   font-size: var(--text-size);
   width: 95%;
   padding: 5px;
@@ -162,23 +148,23 @@ body {
   background-color: var(--light-white);
 }
 
-.box .main-section form .form-item input:-webkit-autofill,
-.box .main-section form .form-item input:-webkit-autofill:hover,
-.box .main-section form .form-item input:-webkit-autofill:focus,
-.box .main-section form .form-item input:-webkit-autofill:active {
+.main-section form .form-item input:-webkit-autofill,
+.main-section form .form-item input:-webkit-autofill:hover,
+.main-section form .form-item input:-webkit-autofill:focus,
+.main-section form .form-item input:-webkit-autofill:active {
   box-shadow: 0 0 0 30px var(--light-white) inset !important;
   -webkit-box-shadow: 0 0 0 30px var(--light-white) inset !important;
 }
 
-.box .main-section form .form-item input:focus {
+.main-section form .form-item input:focus {
   border-bottom: 1px solid var(--accent-color);
 }
 
-.box .main-section form .form-item input:focus + svg {
+.main-section form .form-item input:focus + svg {
   fill: var(--accent-color);
 }
 
-.box .main-section form svg {
+.main-section form svg {
   width: var(--icon-size);
   height: var(--icon-size);
   fill: var(--light-secondary-color);
@@ -186,7 +172,7 @@ body {
   margin-left: 12px;
 }
 
-.box .main-section form > input[type="submit"] {
+.main-section form > input[type="submit"] {
   margin-top: 20px;
   padding: 5px 10px;
   width: 100%;
@@ -208,12 +194,12 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.box .main-section form > input[type="submit"]:hover {
+.main-section form > input[type="submit"]:hover {
   box-shadow: 1px 4px 8px 1px rgba(var(--accent-color-rgb), 0.4),
     -1px -2px 4px 0 rgba(var(--accent-color-rgb), 0.2);
 }
 
-.box .welcome {
+.welcome {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,32 +209,30 @@ body {
   background-size: cover;
   padding: 36px 18px;
   color: var(--light-white);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
   box-shadow: 3px 0 6px 0px rgba(var(--accent-color-rgb), 0.25);
 }
 
-.box .welcome .content {
+.welcome .content {
   text-align: center;
 }
 
-.box .welcome .content h2 {
+.welcome .content h2 {
   font-size: var(--header-size);
   margin-bottom: 20px;
 }
 
-.box .welcome .content p {
+.welcome .content p {
   font-size: var(--text-size);
   margin-bottom: 20px;
 }
 
-.box .welcome .content a {
+.welcome .content a {
   color: var(--light-white);
   text-decoration: none;
   cursor: pointer;
 }
 
-.box .welcome .content > a {
+.welcome .content > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -267,12 +251,12 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-.box .welcome .content > a:hover {
+.welcome .content > a:hover {
   box-shadow: 1px 4px 8px 1px rgba(var(--dark-color-rgb), 0.4),
     -1px -2px 4px 0 rgba(var(--dark-color-rgb), 0.2);
 }
 
-.box .welcome .content > a svg {
+.welcome .content > a svg {
   width: var(--text-size);
   height: var(--text-size);
   fill: var(--light-white);
